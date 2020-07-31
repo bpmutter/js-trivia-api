@@ -5,8 +5,7 @@ fs.readFile(`${__dirname}/questions/en-EN/en.txt`, 'utf8', (err, data) => {
   if (err) throw err;
   const dataArr = data.split('---');
   const questions = dataArr.map((questionTxt, idx) => {
-    console.log('question num:', idx+1)
-    return getQuestionObj(questionTxt)
+    return getQuestionObj(questionTxt, idx+1)
 });
 
   
@@ -17,7 +16,7 @@ fs.readFile(`${__dirname}/questions/en-EN/en.txt`, 'utf8', (err, data) => {
   });
 });
 
-function getQuestionObj(questionData){
+function getQuestionObj(questionData, id){
     const question = getQuestionText(questionData);
     const codeSnippet = getCodeSnippet(questionData);
     const answerOptions = getAnswerOptions(questionData);
@@ -25,6 +24,7 @@ function getQuestionObj(questionData){
     const answerExplanation = getAnswerExplanation(questionData);
 
     const questionObj = {
+      id,
       question,
       codeSnippet,
       answerOptions,
