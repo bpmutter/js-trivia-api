@@ -4,7 +4,7 @@ const apiRouter = require('./routes/api');
 
 const app = express();
 
-app.use("/api", apiRouter);
+app.use("/", apiRouter);
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
