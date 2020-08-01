@@ -142,7 +142,7 @@
     "answerExplanation": "For `sarah`, we didn't use the `new` keyword. When using `new`, `this` refers to the new empty object we create. However, if you don't add `new`, `this` refers to the **global object**!\n\nWe said that `this.firstName` equals `\"Sarah\"` and `this.lastName` equals `\"Smith\"`. What we actually did, is defining `global.firstName = 'Sarah'` and `global.lastName = 'Smith'`. `sarah` itself is left `undefined`, since we don't return a value from the `Person` function."
 }, {
     "id": 13,
-    "question": "What are the three phases of event propagation?\n\n- A: Target > Capturing > Bubbling\n- B: Bubbling > Target > Capturing\n- C: Target > Bubbling > Capturing\n- D: Capturing > Target > Bubbling\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: D\n\nDuring the **capturing** phase, the event goes through the ancestor elements down to the target element. It then reaches the **target** element, and **bubbling** begins.\n\n<img src=\"https://i.imgur.com/N18oRgd.png\" width=\"200\">\n\n</p>\n</details>",
+    "question": "What are the three phases of event propagation?",
     "codeSnippet": null,
     "answerOptions": {
         "A": "Target > Capturing > Bubbling",
@@ -154,7 +154,7 @@
     "answerExplanation": "During the **capturing** phase, the event goes through the ancestor elements down to the target element. It then reaches the **target** element, and **bubbling** begins.\n\n<img src=\"https://i.imgur.com/N18oRgd.png\" width=\"200\">"
 }, {
     "id": 14,
-    "question": "All object have prototypes.\n\n- A: true\n- B: false\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: B\n\nAll objects have prototypes, except for the **base object**. The base object is the object created by the user, or an object that is created using the `new` keyword. The base object has access to some methods and properties, such as `.toString`. This is the reason why you can use built-in JavaScript methods! All of such methods are available on the prototype. Although JavaScript can't find it directly on your object, it goes down the prototype chain and finds it there, which makes it accessible for you.\n\n</p>\n</details>",
+    "question": "All object have prototypes.",
     "codeSnippet": null,
     "answerOptions": {
         "A": "true",
@@ -294,7 +294,7 @@
     "answerExplanation": "If you have two keys with the same name, the key will be replaced. It will still be in its first position, but with the last specified value."
 }, {
     "id": 26,
-    "question": "The JavaScript global execution context creates two things for you: the global object, and the \"this\" keyword.\n\n- A: true\n- B: false\n- C: it depends\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: A\n\nThe base execution context is the global execution context: it's what's accessible everywhere in your code.\n\n</p>\n</details>",
+    "question": "The JavaScript global execution context creates two things for you: the global object, and the \"this\" keyword.",
     "codeSnippet": null,
     "answerOptions": {
         "A": "true",
@@ -449,7 +449,7 @@
     "answerExplanation": "The `catch` block receives the argument `x`. This is not the same `x` as the variable when we pass arguments. This variable `x` is block-scoped.\n\nLater, we set this block-scoped variable equal to `1`, and set the value of the variable `y`. Now, we log the block-scoped variable `x`, which is equal to `1`.\n\nOutside of the `catch` block, `x` is still `undefined`, and `y` is `2`. When we want to `console.log(x)` outside of the `catch` block, it returns `undefined`, and `y` returns `2`."
 }, {
     "id": 39,
-    "question": "Everything in JavaScript is either a...\n\n- A: primitive or object\n- B: function or object\n- C: trick question! only objects\n- D: number or object\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: A\n\nJavaScript only has primitive types and objects.\n\nPrimitive types are `boolean`, `null`, `undefined`, `bigint`, `number`, `string`, and `symbol`.\n\nWhat differentiates a primitive from an object is that primitives do not have any properties or methods; however, you'll note that `'foo'.toUpperCase()` evaluates to `'FOO'` and does not result in a `TypeError`. This is because when you try to access a property or method on a primitive like a string, JavaScript will implicitly wrap the object using one of the wrapper classes, i.e. `String`, and then immediately discard the wrapper after the expression evaluates. All primitives except for `null` and `undefined` exhibit this behaviour.\n\n</p>\n</details>",
+    "question": "Everything in JavaScript is either a...",
     "codeSnippet": null,
     "answerOptions": {
         "A": "primitive or object",

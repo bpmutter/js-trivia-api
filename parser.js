@@ -18,7 +18,7 @@ fs.readFile(`${__dirname}/questions/en-EN/en.txt`, 'utf8', (err, data) => {
 
 function getQuestionObj(questionData, id){
     const question = getQuestionText(questionData);
-    const codeSnippet = getCodeSnippet(questionData);
+    const codeSnippet = getCodeSnippet(questionData, id);
     const answerOptions = getAnswerOptions(questionData);
     const correctAnswer = getCorrectAnswer(questionData);
     const answerExplanation = getAnswerExplanation(questionData);
@@ -64,12 +64,15 @@ function getAnswerOptions(questionData){
     
 }
 
-function getCodeSnippet(questionData){
+function getCodeSnippet(questionData, id ){
     const regex = /```javascript|```/;
     const codeSnippet = questionData.split(regex)[1]
     if(codeSnippet){
         return codeSnippet.trim()
-    }else return null;
+    }else {
+        console.log('MUST EDIT NOT CODE SNIPPET::', id);
+        return null;
+    }
     
 }
 
