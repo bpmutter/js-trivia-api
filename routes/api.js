@@ -6,11 +6,21 @@ console.log(questionsEN);
 
 const router = express.Router();
 
+
+//redirect generic queries to English results
+router.get("/", (req, res) => {
+  return res.redirect('/en')
+});
+router.get("/:id(\\d+)", (req, res) => {
+  const id = parseInt(req.params.id);
+  return res.redirect(`/en/${id}`);
+});
+
+
 router.get("/en", asyncHandler(async(req, res) => {
     
     res.send({questionsEN})
 }));
-
 router.get("/en/:id(\\d+)", asyncHandler(async(req, res) => {
     const id = parseInt(req.params.id);
     
