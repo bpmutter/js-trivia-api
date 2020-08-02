@@ -19,7 +19,7 @@ router.get("/:id(\\d+)", (req, res) => {
 
 router.get("/en", asyncHandler(async(req, res) => {
     
-    res.send({questionsEN})
+    res.send({questions})
 }));
 router.get("/en/:id(\\d+)", asyncHandler(async(req, res) => {
     const id = parseInt(req.params.id);
