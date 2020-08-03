@@ -1,31 +1,3 @@
-# JavaScript Fragen (für Fortgeschrittene)
-
-Täglich poste ich mehrere Multiple-Choice-Fragen über JavaScript auf meinem [Instagram](https://www.instagram.com/theavocoder), die ich nun auch hier veröffentlichen werde.
-
-Von einfach bis fortgeschritten: teste wie gut du JavaScript kennst, frische dein Wissen auf oder bereite dich auf ein Vorstellungsgespräch vor! :muscle: :rocket: Ich werde dieses Repo wöchentlich mit neuen Fragen erweitern.
-
-Die Antworten sind unterhalb der Fragen versteckt. Du kannst einfach darauf klicken um die Antworten anzuzeigen. Viel Glück :heart:
-
-### Alle verfügbaren Sprachen
-* [English](../en-EN/README.md)
-* [العربية](../ar-AR/README_AR.md)
-* [اللغة العامية - Egyptian Arabic](../ar-EG/README_ar-EG.md)
-* [Bosanski](../bs-BS/README-bs_BS.md)  
-* [Deutsch](../de-DE/README.md)  
-* [Español](../es-ES/README-ES.md)
-* [Français](../fr-FR/README_fr-FR.md)
-* [日本語](../ja-JA/README-ja_JA.md)  
-* [한국어](../ko-KR/README-ko_KR.md)
-* [Nederlands](./nl-NL/README.md)
-* [Português Brasil](../pt-BR/README_pt_BR.md)  
-* [Русский](../ru-RU/README.md)
-* [Українська мова](../ua-UA/README-ua_UA.md)  
-* [Tiếng Việt](../vi-VI/README-vi.md)
-* [中文版本](../zh-CN/README-zh_CN.md)
-* [Türkçe](../tr-TR/README-tr_TR.md)
-* [ไทย](../th-TH/README-th_TH.md)
-
----
 
 ###### 1. Was ist der Output?
 
@@ -40,10 +12,10 @@ function sayHi() {
 sayHi();
 ```
 
--   A: `Lydia` und `undefined`
--   B: `Lydia` und `ReferenceError`
--   C: `ReferenceError` und `21`
--   D: `undefined` und `ReferenceError`
+- A: `Lydia` und `undefined`
+- B: `Lydia` und `ReferenceError`
+- C: `ReferenceError` und `21`
+- D: `undefined` und `ReferenceError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -71,9 +43,9 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
--   A: `0 1 2` und `0 1 2`
--   B: `0 1 2` und `3 3 3`
--   C: `3 3 3` und `0 1 2`
+- A: `0 1 2` und `0 1 2`
+- B: `0 1 2` und `3 3 3`
+- C: `3 3 3` und `0 1 2`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -104,10 +76,10 @@ shape.diameter();
 shape.perimeter();
 ```
 
--   A: `20` und `62.83185307179586`
--   B: `20` und `NaN`
--   C: `20` und `63`
--   D: `NaN` und `63`
+- A: `20` und `62.83185307179586`
+- B: `20` und `NaN`
+- C: `20` und `63`
+- D: `NaN` und `63`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -132,9 +104,9 @@ Es gibt keinen Wert `radius` in dem Object, daher wird `undefined` zurückgegebe
 !"Lydia";
 ```
 
--   A: `1` und `false`
--   B: `false` und `NaN`
--   C: `false` und `false`
+- A: `1` und `false`
+- B: `false` und `NaN`
+- C: `false` und `false`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -163,10 +135,10 @@ const mouse = {
 };
 ```
 
--   A: `mouse.bird.size` ist nicht korrekt
--   B: `mouse[bird.size]` ist nicht korrekt
--   C: `mouse[bird["size"]]` ist nicht korrekt
--   D: Keine der Antworten ist korrekt.
+- A: `mouse.bird.size` ist nicht korrekt
+- B: `mouse[bird.size]` ist nicht korrekt
+- C: `mouse[bird["size"]]` ist nicht korrekt
+- D: Keine der Antworten ist korrekt.
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -197,11 +169,11 @@ c.greeting = "Hello";
 console.log(d.greeting);
 ```
 
--   A: `Hello`
--   B: `Hey`
--   C: `undefined`
--   D: `ReferenceError`
--   E: `TypeError`
+- A: `Hello`
+- B: `Hey`
+- C: `undefined`
+- D: `ReferenceError`
+- E: `TypeError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -233,10 +205,10 @@ console.log(a === b);
 console.log(b === c);
 ```
 
--   A: `true` `false` `true`
--   B: `false` `false` `true`
--   C: `true` `false` `false`
--   D: `false` `true` `true`
+- A: `true` `false` `true`
+- B: `false` `false` `true`
+- C: `true` `false` `false`
+- D: `false` `true` `true`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -272,10 +244,10 @@ const freddie = new Chameleon({ newColor: "purple" });
 freddie.colorChange("orange");
 ```
 
--   A: `orange`
--   B: `purple`
--   C: `green`
--   D: `TypeError`
+- A: `orange`
+- B: `purple`
+- C: `green`
+- D: `TypeError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -297,9 +269,9 @@ greetign = {}; // Typo!
 console.log(greetign);
 ```
 
--   A: `{}`
--   B: `ReferenceError: greetign is not defined`
--   C: `undefined`
+- A: `{}`
+- B: `ReferenceError: greetign is not defined`
+- C: `undefined`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -325,10 +297,10 @@ function bark() {
 bark.animal = "dog";
 ```
 
--   A: Nichts, das ist absolut in Ordnung.
--   B: `SyntaxError`. Man kann einer Funktion keine Properties in der Form zuweisen.
--   C: `undefined`
--   D: `ReferenceError`
+- A: Nichts, das ist absolut in Ordnung.
+- B: `SyntaxError`. Man kann einer Funktion keine Properties in der Form zuweisen.
+- C: `undefined`
+- D: `ReferenceError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -360,10 +332,10 @@ Person.getFullName = function() {
 console.log(member.getFullName());
 ```
 
--   A: `TypeError`
--   B: `SyntaxError`
--   C: `Lydia Hallie`
--   D: `undefined` `undefined`
+- A: `TypeError`
+- B: `SyntaxError`
+- C: `Lydia Hallie`
+- D: `undefined` `undefined`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -401,10 +373,10 @@ console.log(lydia);
 console.log(sarah);
 ```
 
--   A: `Person {firstName: "Lydia", lastName: "Hallie"}` und `undefined`
--   B: `Person {firstName: "Lydia", lastName: "Hallie"}` und `Person {firstName: "Sarah", lastName: "Smith"}`
--   C: `Person {firstName: "Lydia", lastName: "Hallie"}` und `{}`
--   D:`Person {firstName: "Lydia", lastName: "Hallie"}` und `ReferenceError`
+- A: `Person {firstName: "Lydia", lastName: "Hallie"}` und `undefined`
+- B: `Person {firstName: "Lydia", lastName: "Hallie"}` und `Person {firstName: "Sarah", lastName: "Smith"}`
+- C: `Person {firstName: "Lydia", lastName: "Hallie"}` und `{}`
+- D:`Person {firstName: "Lydia", lastName: "Hallie"}` und `ReferenceError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -422,10 +394,10 @@ Wir haben `this.firstName` den Wert `"Sarah"` zugewiesen und `this.lastName` den
 
 ###### 13. Was sind die drei Phasen der Event Propagation?
 
--   A: Target > Capturing > Bubbling
--   B: Bubbling > Target > Capturing
--   C: Target > Bubbling > Capturing
--   D: Capturing > Target > Bubbling
+- A: Target > Capturing > Bubbling
+- B: Bubbling > Target > Capturing
+- C: Target > Bubbling > Capturing
+- D: Capturing > Target > Bubbling
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -443,8 +415,8 @@ Während der **capturing** Phase geht das Event durch die Elternelemente bis hin
 
 ###### 14. Alle Objekte haben Prototypes.
 
--   A: wahr
--   B: falsch
+- A: wahr
+- B: falsch
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -468,10 +440,10 @@ function sum(a, b) {
 sum(1, "2");
 ```
 
--   A: `NaN`
--   B: `TypeError`
--   C: `"12"`
--   D: `3`
+- A: `NaN`
+- B: `TypeError`
+- C: `"12"`
+- D: `3`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -496,10 +468,10 @@ console.log(++number);
 console.log(number);
 ```
 
--   A: `1` `1` `2`
--   B: `1` `2` `2`
--   C: `0` `2` `2`
--   D: `0` `1` `2`
+- A: `1` `1` `2`
+- B: `1` `2` `2`
+- C: `0` `2` `2`
+- D: `0` `1` `2`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -538,9 +510,9 @@ const age = 21;
 getPersonInfo`${person} is ${age} years old`;
 ```
 
--   A: `"Lydia"` `21` `["", " is ", " years old"]`
--   B: `["", " is ", " years old"]` `"Lydia"` `21`
--   C: `"Lydia"` `["", " is ", " years old"]` `21`
+- A: `"Lydia"` `21` `["", " is ", " years old"]`
+- B: `["", " is ", " years old"]` `"Lydia"` `21`
+- C: `"Lydia"` `["", " is ", " years old"]` `21`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -570,9 +542,9 @@ function checkAge(data) {
 checkAge({ age: 18 });
 ```
 
--   A: `You are an adult!`
--   B: `You are still an adult.`
--   C: `Hmm.. You don't have an age I guess`
+- A: `You are an adult!`
+- B: `You are still an adult.`
+- C: `Hmm.. You don't have an age I guess`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -600,10 +572,10 @@ function getAge(...args) {
 getAge(21);
 ```
 
--   A: `"number"`
--   B: `"array"`
--   C: `"object"`
--   D: `"NaN"`
+- A: `"number"`
+- B: `"array"`
+- C: `"object"`
+- D: `"NaN"`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -629,10 +601,10 @@ function getAge() {
 getAge();
 ```
 
--   A: `21`
--   B: `undefined`
--   C: `ReferenceError`
--   D: `TypeError`
+- A: `21`
+- B: `undefined`
+- C: `ReferenceError`
+- D: `TypeError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -652,10 +624,10 @@ Durch `"use strict"` kann man sicher stellen, dass man nicht versehentlich globa
 const sum = eval("10*10+5");
 ```
 
--   A: `105`
--   B: `"105"`
--   C: `TypeError`
--   D: `"10*10+5"`
+- A: `105`
+- B: `"105"`
+- C: `TypeError`
+- D: `"10*10+5"`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -675,10 +647,10 @@ const sum = eval("10*10+5");
 sessionStorage.setItem("cool_secret", 123);
 ```
 
--   A: Für immer, der Wert geht nicht verloren.
--   B: Wenn der User den Tab schließt.
--   C: Wenn der User den Browser schließt, nicht nur den Tab.
--   D: Wenn der User den Computer neu startet.
+- A: Für immer, der Wert geht nicht verloren.
+- B: Wenn der User den Tab schließt.
+- C: Wenn der User den Browser schließt, nicht nur den Tab.
+- D: Wenn der User den Computer neu startet.
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -703,10 +675,10 @@ var num = 10;
 console.log(num);
 ```
 
--   A: `8`
--   B: `10`
--   C: `SyntaxError`
--   D: `ReferenceError`
+- A: `8`
+- B: `10`
+- C: `SyntaxError`
+- D: `ReferenceError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -734,10 +706,10 @@ set.has("1");
 set.has(1);
 ```
 
--   A: `false` `true` `false` `true`
--   B: `false` `true` `true` `true`
--   C: `true` `true` `false` `true`
--   D: `true` `true` `true` `true`
+- A: `false` `true` `false` `true`
+- B: `false` `true` `true` `true`
+- C: `true` `true` `false` `true`
+- D: `true` `true` `true` `true`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -760,10 +732,10 @@ const obj = { a: "one", b: "two", a: "three" };
 console.log(obj);
 ```
 
--   A: `{ a: "one", b: "two" }`
--   B: `{ b: "two", a: "three" }`
--   C: `{ a: "three", b: "two" }`
--   D: `SyntaxError`
+- A: `{ a: "one", b: "two" }`
+- B: `{ b: "two", a: "three" }`
+- C: `{ a: "three", b: "two" }`
+- D: `SyntaxError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -779,9 +751,9 @@ Wenn man zwei Keys mit dem selben Namen hat, wird der erste Key ersetzt. Er wird
 
 ###### 26. Der JavaScript Global Execution Context erstellt zwei Dinge: das globale Objekt und das "this" Keyword.
 
--   A: wahr
--   B: falsch
--   C: kommt darauf an
+- A: wahr
+- B: falsch
+- C: kommt darauf an
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -804,10 +776,10 @@ for (let i = 1; i < 5; i++) {
 }
 ```
 
--   A: `1` `2`
--   B: `1` `2` `3`
--   C: `1` `2` `4`
--   D: `1` `3` `4`
+- A: `1` `2`
+- B: `1` `2` `3`
+- C: `1` `2` `4`
+- D: `1` `3` `4`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -833,10 +805,10 @@ const name = "Lydia";
 name.giveLydiaPizza();
 ```
 
--   A: `"Just give Lydia pizza already!"`
--   B: `TypeError: not a function`
--   C: `SyntaxError`
--   D: `undefined`
+- A: `"Just give Lydia pizza already!"`
+- B: `TypeError: not a function`
+- C: `SyntaxError`
+- D: `undefined`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -863,10 +835,10 @@ a[c] = 456;
 console.log(a[b]);
 ```
 
--   A: `123`
--   B: `456`
--   C: `undefined`
--   D: `ReferenceError`
+- A: `123`
+- B: `456`
+- C: `undefined`
+- D: `ReferenceError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -896,10 +868,10 @@ foo();
 baz();
 ```
 
--   A: `First` `Second` `Third`
--   B: `First` `Third` `Second`
--   C: `Second` `First` `Third`
--   D: `Second` `Third` `First`
+- A: `First` `Second` `Third`
+- B: `First` `Third` `Second`
+- C: `Second` `First` `Third`
+- D: `Second` `Third` `First`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -949,10 +921,10 @@ Das ist, wo die Event Loop ins Spiel kommt. Die **Event Loop** betrachtet den St
 </div>
 ```
 
--   A: Äußerer `div`
--   B: Innerer `div`
--   C: `button`
--   D: Ein Array mit allen genesteten Elementen
+- A: Äußerer `div`
+- B: Innerer `div`
+- C: `button`
+- D: Ein Array mit allen genesteten Elementen
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -976,10 +948,10 @@ Das am tiefsten genestete Element, welches das Event auslöst ist das Event Targ
 </div>
 ```
 
--   A: `p` `div`
--   B: `div` `p`
--   C: `p`
--   D: `div`
+- A: `p` `div`
+- B: `div` `p`
+- C: `p`
+- D: `div`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1006,10 +978,10 @@ sayHi.call(person, 21);
 sayHi.bind(person, 21);
 ```
 
--   A: `undefined is 21` `Lydia is 21`
--   B: `function` `function`
--   C: `Lydia is 21` `Lydia is 21`
--   D: `Lydia is 21` `function`
+- A: `undefined is 21` `Lydia is 21`
+- B: `function` `function`
+- C: `Lydia is 21` `Lydia is 21`
+- D: `Lydia is 21` `function`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1035,10 +1007,10 @@ function sayHi() {
 typeof sayHi();
 ```
 
--   A: `"object"`
--   B: `"number"`
--   C: `"function"`
--   D: `"undefined"`
+- A: `"object"`
+- B: `"number"`
+- C: `"function"`
+- D: `"undefined"`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1065,10 +1037,10 @@ new Boolean(false);
 undefined;
 ```
 
--   A: `0`, `''`, `undefined`
--   B: `0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`
--   C: `0`, `''`, `new Boolean(false)`, `undefined`
--   D: Alle sind falsy
+- A: `0`, `''`, `undefined`
+- B: `0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`
+- C: `0`, `''`, `new Boolean(false)`, `undefined`
+- D: Alle sind falsy
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1077,12 +1049,12 @@ undefined;
 
 Es gibt nur 6 falsy typen:
 
--   `undefined`
--   `null`
--   `NaN`
--   `0`
--   `''` (leerer String)
--   `false`
+- `undefined`
+- `null`
+- `NaN`
+- `0`
+- `''` (leerer String)
+- `false`
 
 Funktions-Constructor, wie `new Number` und `new Boolean` sind truthy.
 
@@ -1097,10 +1069,10 @@ Funktions-Constructor, wie `new Number` und `new Boolean` sind truthy.
 console.log(typeof typeof 1);
 ```
 
--   A: `"number"`
--   B: `"string"`
--   C: `"object"`
--   D: `"undefined"`
+- A: `"number"`
+- B: `"string"`
+- C: `"object"`
+- D: `"undefined"`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1123,10 +1095,10 @@ numbers[10] = 11;
 console.log(numbers);
 ```
 
--   A: `[1, 2, 3, 7 x null, 11]`
--   B: `[1, 2, 3, 11]`
--   C: `[1, 2, 3, 7 x empty, 11]`
--   D: `SyntaxError`
+- A: `[1, 2, 3, 7 x null, 11]`
+- B: `[1, 2, 3, 11]`
+- C: `[1, 2, 3, 7 x empty, 11]`
+- D: `SyntaxError`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1160,10 +1132,10 @@ abhängig davon wo das Array ausgeführt wird (die Ausgabe ist unterschiedlich f
 })();
 ```
 
--   A: `1` `undefined` `2`
--   B: `undefined` `undefined` `undefined`
--   C: `1` `1` `2`
--   D: `1` `undefined` `undefined`
+- A: `1` `undefined` `2`
+- B: `undefined` `undefined` `undefined`
+- C: `1` `1` `2`
+- D: `1` `undefined` `undefined`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1183,10 +1155,10 @@ Außerhalb des `catch` Blocks ist `x` noch immer `undefined` und `y` ist `2`. We
 
 ###### 39. Alles in JavaScript ist entweder ein ...
 
--   A: Primitive oder Object
--   B: Function oder Object
--   C: Fangfrage: nur Objects!
--   D: Number oder Object
+- A: Primitive oder Object
+- B: Function oder Object
+- C: Fangfrage: nur Objects!
+- D: Number oder Object
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1215,10 +1187,10 @@ Was einen primitiven Typ von einem Objekt unterscheidet ist, dass Primitive kein
 );
 ```
 
--   A: `[0, 1, 2, 3, 1, 2]`
--   B: `[6, 1, 2]`
--   C: `[1, 2, 0, 1, 2, 3]`
--   D: `[1, 2, 6]`
+- A: `[0, 1, 2, 3, 1, 2]`
+- B: `[6, 1, 2]`
+- C: `[1, 2, 0, 1, 2, 3]`
+- D: `[1, 2, 6]`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1242,10 +1214,10 @@ Dann entspricht `acc` gleich `[1, 2, 0, 1]` und `cur` ist gleich `[2, 3]`. Wir v
 !!1;
 ```
 
--   A: `false` `true` `false`
--   B: `false` `false` `true`
--   C: `false` `true` `true`
--   D: `true` `true` `false`
+- A: `false` `true` `false`
+- B: `false` `false` `true`
+- C: `false` `true` `true`
+- D: `true` `true` `false`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1269,10 +1241,10 @@ Dann entspricht `acc` gleich `[1, 2, 0, 1]` und `cur` ist gleich `[2, 3]`. Wir v
 setInterval(() => console.log("Hi"), 1000);
 ```
 
--   A: Eine unique id
--   B: Die definierte Anzahl von Millisekunden
--   C: Die Callback Function
--   D: `undefined`
+- A: Eine unique id
+- B: Die definierte Anzahl von Millisekunden
+- C: Die Callback Function
+- D: `undefined`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1292,10 +1264,10 @@ Es gibt eine unique id zurück. Diese id kann zum Beispiel verwendet werden um d
 [..."Lydia"];
 ```
 
--   A: `["L", "y", "d", "i", "a"]`
--   B: `["Lydia"]`
--   C: `[[], "Lydia"]`
--   D: `[["L", "y", "d", "i", "a"]]`
+- A: `["L", "y", "d", "i", "a"]`
+- B: `["Lydia"]`
+- C: `[[], "Lydia"]`
+- D: `[["L", "y", "d", "i", "a"]]`
 
 <details><summary><b>Antwort</b></summary>
 <p>
@@ -1965,11 +1937,9 @@ Der unäre Operator `++` _gibt zuerst_ den Wert des Operanden aus und _erhöht d
 </p>
 </details>
 
-
-
 ---
 
-###### <a name=20190707></a>64. Was ist der Output?
+###### 64. Was ist der Output?
 
 ```javascript
 const value = { number: 10 };
@@ -2471,7 +2441,7 @@ Beim dritten Mal geben wir `5 * 2` als Argument in die Funktion ein, was `10` er
 
 ---
 
-###### <a name=20190726></a>79. Was ist der Output?
+###### 79. Was ist der Output?
 
 ```javascript
 const myLifeSummedUp = ["☕", "💻", "🍷", "🍫"]
@@ -2733,7 +2703,7 @@ Wenn wir `hasName` gleich `name` setzen, so beinhaltet `hasName` den Wert von `n
 
 ---
 
-###### <a name=20190805></a>87. Was ist der Output?
+###### 87. Was ist der Output?
 
 ```javascript
 console.log("I want pizza"[0])
@@ -2987,7 +2957,7 @@ Dieses Beispiel würde funktionieren und `[ 'banana', 'apple', 'orange', 'pear' 
 
 ---
 
-###### <a name=20190817></a>95. Was ist der Output?
+###### 95. Was ist der Output?
 
 ```javascript
 function nums(a, b) {
@@ -3464,7 +3434,7 @@ Mit der `splice` Methode ändern wir das ursprüngliche Array durch löschen, er
 
 ---
 
-###### <a name=20191009></a>109. Was ist der Output?
+###### 109. Was ist der Output?
 
 ```javascript
 const food = ['🍕', '🍫', '🥑', '🍔']
