@@ -3188,7 +3188,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 
 ---
 
-###### 101.输出什么?
+###### 101. 输出什么?
 
 ```javascript
 const one = (false || {} || null)

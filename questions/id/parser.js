@@ -2,7 +2,7 @@ const fs = require('fs');
 const { start } = require('repl');
 
 // console.log(__dirname);
-fs.readFile(`zh-cn.txt`, 'utf8', (err, data) => {
+fs.readFile(`id.txt`, 'utf8', (err, data) => {
   if (err) throw err;
   const dataArr = data.split('---');
   const questions = dataArr.map((questionTxt, idx) => {
@@ -11,7 +11,7 @@ fs.readFile(`zh-cn.txt`, 'utf8', (err, data) => {
 
   
   const questionJSON = JSON.stringify(questions);
-  fs.writeFile(`zh-cn.json`, questionJSON, 'utf8', (err)=>{
+  fs.writeFile(`id.json`, questionJSON, 'utf8', (err)=>{
       if(err) throw err;
       console.log('success!!')
   });
