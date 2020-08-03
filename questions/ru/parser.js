@@ -1,22 +1,28 @@
 const fs = require('fs');
 
 // console.log(__dirname);
-fs.readFile(`${__dirname}/questions/en-EN/en.txt`, 'utf8', (err, data) => {
+fs.readFile(`ru.txt`, 'utf8', (err, data) => {
   if (err) throw err;
   const dataArr = data.split('---');
   const questions = dataArr.map((questionTxt, idx) => {
     return getQuestionObj(questionTxt, idx+1)
-});
+  });
 
   
   const questionJSON = JSON.stringify(questions);
-  fs.writeFile(`${__dirname}/questions/en-EN/en.json`, questionJSON, 'utf8', (err)=>{
+  fs.writeFile(`ru.json`, questionJSON, 'utf8', (err)=>{
       if(err) throw err;
       console.log('success!!')
   });
+
+//   test sequence
+//     const testData = dataArr[5];
+//     const qObj = getQuestionObj(testData, 5);
+//     console.log(qObj);
 });
 
 function getQuestionObj(questionData, id){
+    console.log('QUESTION ID::',id);
     const question = getQuestionText(questionData);
     const codeSnippet = getCodeSnippet(questionData, id);
     const answerOptions = getAnswerOptions(questionData);
@@ -36,7 +42,7 @@ function getQuestionObj(questionData, id){
 }
 
 function getAnswerExplanation(questionData){ 
-    const startRegex = /#### Answer: [A-Z]/;
+    const startRegex = /#### .*: [A-Z]/;
     const endRegex = /<\/p>/
     let explanation = questionData.split(startRegex)[1];
     explanation = explanation.split(endRegex)[0].trim();
@@ -44,7 +50,7 @@ function getAnswerExplanation(questionData){
 }
 
 function getCorrectAnswer(questionData){
-    const regex = /#### Answer: [A-Z]/;
+    const regex = /#### .*: [A-Z]/;
     const answerLine = questionData.match(regex)[0].trim();
     const answer = answerLine[answerLine.length-1];
     return answer;
@@ -70,15 +76,18 @@ function getCodeSnippet(questionData, id ){
     if(codeSnippet){
         return codeSnippet.trim()
     }else {
-        console.log('MUST EDIT NOT CODE SNIPPET::', id);
+        if(id) console.log('MUST EDIT NOT CODE SNIPPET::', id);
         return null;
     }
     
 }
 
 function getQuestionText(questionData){
-    const questionLine = questionData.split("```javascript")[0];
-    const questionArr = questionLine.split(".");
-    const question = questionArr.slice(1).join(".").trim();
+    const regex = /###### (([1-9]|[1-9][0-9]|[1-9][0-9][0-9])\.|89.|95.) .*/;
+    let questionLine = questionData.match(regex);
+    questionLine = questionLine[0]
+    const startRegex = /###### ([1-9]|[1-9][0-9]|[1-9][0-9][0-9])\./;
+    let question = questionLine.split(startRegex)[2];
+    console.log("QUESTION::", question)
     return question;
 }
