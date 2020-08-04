@@ -4,7 +4,7 @@ const asyncHandler = require("../utils/asyncHandler");
 
 const router = express.Router();
 
-const supportedLangs = ["en", "es", "fr", "de", "ja", "ru", "pt-br", "zh-cn", "id"];
+const supportedLangs = ["en", "es", "fr", "de", "ja", "ru", "pt-br", "zh-cn", "id", "ko"];
 
 //redirect generic queries to English results
 router.get("/", (req, res) => {

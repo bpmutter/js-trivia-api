@@ -5,7 +5,7 @@ const { start } = require('repl');
 fs.readFile(`zh-cn.txt`, 'utf8', (err, data) => {
   if (err) throw err;
   const dataArr = data.split('---');
-  const questions = dataArr.map((questionTxt, idx) => {
+  const questions = dataArr.slice(0,100).map((questionTxt, idx) => {
     return getQuestionObj(questionTxt, idx+1)
   });
 
