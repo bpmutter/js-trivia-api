@@ -353,8 +353,8 @@
     "answerExplanation": "We have a `setTimeout` function and invoked it first. Yet, it was logged last.\n\nThis is because in browsers, we don't just have the runtime engine, we also have something called a `WebAPI`. The `WebAPI` gives us the `setTimeout` function to start with, and for example the DOM.\n\nAfter the _callback_ is pushed to the WebAPI, the `setTimeout` function itself (but not the callback!) is popped off the stack.\n\n<img src=\"https://i.imgur.com/X5wsHOg.png\" width=\"200\">\n\nNow, `foo` gets invoked, and `\"First\"` is being logged.\n\n<img src=\"https://i.imgur.com/Pvc0dGq.png\" width=\"200\">\n\n`foo` is popped off the stack, and `baz` gets invoked. `\"Third\"` gets logged.\n\n<img src=\"https://i.imgur.com/WhA2bCP.png\" width=\"200\">\n\nThe WebAPI can't just add stuff to the stack whenever it's ready. Instead, it pushes the callback function to something called the _queue_.\n\n<img src=\"https://i.imgur.com/NSnDZmU.png\" width=\"200\">\n\nThis is where an event loop starts to work. An **event loop** looks at the stack and task queue. If the stack is empty, it takes the first thing on the queue and pushes it onto the stack.\n\n<img src=\"https://i.imgur.com/uyiScAI.png\" width=\"200\">\n\n`bar` gets invoked, `\"Second\"` gets logged, and it's popped off the stack."
 }, {
     "id": 31,
-    "question": "What is the event.target when clicking the button?\n\n```html\n<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>\n```\n\n- A: Outer `div`\n- B: Inner `div`\n- C: `button`\n- D: An array of all nested elements.\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: C\n\nThe deepest nested element that caused the event is the target of the event. You can stop bubbling by `event.stopPropagation`\n\n</p>\n</details>",
-    "codeSnippet": "html\n<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>",
+    "question": "What is the event.target when clicking the button?",
+    "codeSnippet": "<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>",
     "answerOptions": {
         "A": "Outer `div`",
         "B": "Inner `div`",
@@ -365,8 +365,8 @@
     "answerExplanation": "The deepest nested element that caused the event is the target of the event. You can stop bubbling by `event.stopPropagation`"
 }, {
     "id": 32,
-    "question": "When you click the paragraph, what's the logged output?\n\n```html\n<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>\n```\n\n- A: `p` `div`\n- B: `div` `p`\n- C: `p`\n- D: `div`\n\n<details><summary><b>Answer</b></summary>\n<p>\n\n#### Answer: A\n\nIf we click `p`, we see two logs: `p` and `div`. During event propagation, there are 3 phases: capturing, target, and bubbling. By default, event handlers are executed in the bubbling phase (unless you set `useCapture` to `true`). It goes from the deepest nested element outwards.\n\n</p>\n</details>",
-    "codeSnippet": "html\n<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>",
+    "question": "When you click the paragraph, what's the logged output?",
+    "codeSnippet": "<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>",
     "answerOptions": {
         "A": "`p` `div`",
         "B": "`div` `p`",
