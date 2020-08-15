@@ -18,7 +18,7 @@ supportedLangages.forEach(lang => {
 
         const questionJSON = JSON.stringify(questions);
         fs.writeFile(
-          `${lang}/${lang}.json`,
+          `testing/${lang}.json`,
           questionJSON,
           "utf8",
           (err) => {
@@ -88,6 +88,7 @@ function getCodeSnippet(questionData, lang, id) {
   if (codeSnippet) {
     return codeSnippet.trim();
   } else {
+    if (id) console.log("MUST EDIT CODE SNIPPET AT::", lang, id);
     return null;
   }
 }
