@@ -2,11 +2,10 @@ const LanguageModels = require('../models/LanguageModels')
 const mongoose = require('mongoose')
 const supportedLanguages = require('../supportedLanguages')
 require("dotenv").config();
-const remoteURl = "mongodb+srv://js-trivia:jstrivia1!@cluster0.m6q07.mongodb.net/jstrivia_app?retryWrites=true&w=majority";
 
-mongoose.connect(remoteURl, {
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.REMOTE_DB_URL, {
+  useUnifiedTopology: true,
+});
 
 
 supportedLanguages.forEach((lang, i) => {
