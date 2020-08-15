@@ -28,7 +28,7 @@ router.get("/:lang", asyncHandler(async(req, res) => {
       if(langIdx < 0) throw new Error("Language not supported")
 
     const questions = await LanguageModels[langIdx].find({})
-      res.send(questions);
+      res.send({questions});
     }catch(err){
       console.error(err);
       res
@@ -53,7 +53,7 @@ router.get("/:lang/:id(\\d+)", asyncHandler(async(req, res) => {
 
       const question = await LanguageModels[langIdx].findOne({id})
 
-      if (question) return res.send(question);
+      if (question) return res.send({question});
       else{
         return res.status(404).send({
           error: `The requested resource ID ${id} could not be found.`,
